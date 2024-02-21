@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Like Me?</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #textContainer {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        #responseMessage {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="textContainer">
+        <h1>Do you like me?</h1>
+        <button onclick="showResponse('Thanks for accepting me🥰!')">Yes</button>
+        <button onclick="showResponse('Hey, no worries at all. Best of luck with everything, thank you for letting me know.')">No</button>
+        <div id="responseMessage"></div>
+    </div>
+
+    <script>
+        function showResponse(message) {
+            document.getElementById("responseMessage").innerHTML = message;
+            document.getElementById("responseMessage").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
